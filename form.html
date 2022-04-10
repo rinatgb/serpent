@@ -31,23 +31,41 @@
 	 Это поможет нам<br> развиваться в дальнейшем и предоставлять пользователям больше<br> нужной им информации. 
 	Ваши данные останутся конфиденциальными.</p>
 	<!-- Форма для заполнения -->
-  	<form>
+  	<form onsubmit="return false;">
  		 <div class="form-group">
-   			 <label for="exampleInputEmail1" class="name">Адрес электронной почты</label>
-   			 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите адрес почты" style="width: 680px;">	
+   			 <label for="exampleInputEmail1" class="name">Адрес электронной почты (обязательно)</label>
+   			 <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Введите адрес почты" style="width: 680px;" required>	
   		</div>
   		<div class="form-group">
 			<br>
-   			 <label for="exampleInputPassword1" class="name">Ваше имя или никнейм</label>
-   			 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите имя" style="width: 680px;">
+   			 <label for="exampleInputPassword1" class="name">Ваше имя или никнейм (обязательно)</label>
+   			 <input type="name" class="form-control" id="name" placeholder="Введите имя" style="width: 680px;" required>
  		 </div><br>
 
 		 <div class="form-group">
    			 <label for="exampleFormControlTextarea1" class="name">Пожалуйста, оставьте свой отзыв о данном сайте</label>
-   			 <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" style="width: 680px;"></textarea>
+   			 <textarea class="form-control" id="text" rows="10" style="width: 680px;"></textarea>
  		 </div><br>
-  		<button type="button" class="btn btn-dark">Отправить отзыв</button>
+		  <!-- Кнопка -->
+  		 <button type="submit" class="btn btn-dark btn-primary" data-bs-target="#mod" id="btn" data-bs-toggle="modal" >Отправить отзыв</button>
 		</form>	
    	</div>
+	 <!-- Модальное окно -->
+	<div class="modal fade" id="mod" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Спасибо за ваш отзыв!</h5>
+			  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+					  </button>
+			</div>
+			<div class="modal-body">
+			  <p>Ваши данные успешно отправлены.</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	<script src="script.js"></script>
  </body>
 </html>

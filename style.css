@@ -35,7 +35,7 @@
 }
 .menu	{
   position: absolute;
-  align: left; 
+  align-items: left;
   font-size: 20px;
   margin-left: 430px;
 }
@@ -64,8 +64,15 @@ a.text {
         line-height: 0.9em;
 
 }
-.name {
-
+.sn {
+  
 	font-size: 18px;
 	line-height: 0.9em;
 }
+.modal-backdrop {
+  background-color: transparent;
+}
+.yes {
+  background: rgb(127, 221, 127);
+}
+
