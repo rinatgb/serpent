@@ -21,6 +21,29 @@ function block() {
    console.log(email.value);
    console.log(nick.value);
    console.log(text.value);
+
+	$.ajax({
+		url: 'ajax.php',
+		type: 'POST',
+		cache: false,
+		data: {'email': email.value, 'name': nick.value, 'text': text.value},
+		dataType: 'html',
+		beforeSend: function(){
+		$("#btn").prop("disabled", true);
+		},
+		success: function(){
+		tit.innerHTML = "Спасибо за ваш отзыв!";
+      		cont.innerHTML = "Ваши данные успешно отправлены.";
+		email.value = '';
+		nick.value = '';
+		text.value = '';
+		$("#btn").prop("disabled", false);
+
+		}
+		});
+
+   return false;
+
  }
 
 
